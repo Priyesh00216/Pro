@@ -1,5 +1,6 @@
 // TimeLineb.js
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -124,3 +125,8 @@ export default function TimeLineb({ handleProcessComplete, handleProcessClose })
     </div>
   );
 }
+
+TimeLineb.propTypes = {
+  handleProcessComplete: PropTypes.func.isRequired,
+  handleProcessClose: PropTypes.func.isRequired
+};

@@ -28,6 +28,7 @@ export default function ProjectCard() {
   const handleClick = () => {
     navigate('/two'); // Assuming './sections/two/view' is the correct path to your destination component
   };
+
   return (
     <div>
       <Paper sx={{ flexGrow: 1 }} elevation={8} className='w-100 h-100 m-3 position-relative overflow-hidden'>
@@ -37,24 +38,24 @@ export default function ProjectCard() {
         >
           <img
             src={IMG}
-            alt="Description of the image"
+            alt="Project background"
             className='w-100 h-100 img-fluid position-absolute top-0 start-0 rounded z-3'
             style={{ objectFit: 'cover', maxWidth: '100%', maxHeight: '100%', opacity: '0.5' }}
           />
         </div>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-        {Array.from(Array(3)).map((_, index) => (
-          <Grid item xs={2} sm={4} md={4} key={index}>
-            <Item>
-            {CardData.map((card, index) => (
-                  <div className='d-flex flex-row justify-content-around w-auto h-50 m-3 p-3 '>
-                    <Card key={index} sx={{ maxWidth: 345 }} onClick={handleClick}>
+          {Array.from(Array(3)).map((_, outerIndex) => (
+            <Grid item xs={2} sm={4} md={4} key={outerIndex}>
+              <Item>
+                {CardData.map((card, innerIndex) => (
+                  <div className='d-flex flex-row justify-content-around w-auto h-50 m-3 p-3 ' key={innerIndex}>
+                    <Card sx={{ maxWidth: 345 }} onClick={handleClick}>
                       <CardActionArea>
                         <CardMedia
                           component="img"
                           height="140"
                           image={img}
-                          alt="green iguana"
+                          alt="Green iguana"
                         />
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
@@ -68,10 +69,10 @@ export default function ProjectCard() {
                     </Card>
                   </div>
                 ))}
-            </Item>
-          </Grid>
-        ))}
-      </Grid>
+              </Item>
+            </Grid>
+          ))}
+        </Grid>
       </Paper>
     </div>
   );

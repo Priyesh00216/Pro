@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 // components
 import { useSettingsContext } from 'src/components/settings';
-import Details from './Detail.js';
+import Details from './Detail';
 
 // ----------------------------------------------------------------------
 
