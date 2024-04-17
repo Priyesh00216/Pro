@@ -26,7 +26,7 @@ export default function ProjectCard() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/two'); // Assuming './sections/two/view' is the correct path to your destination component
+    navigate('/dashboard/two'); // Assuming './sections/two/view' is the correct path to your destination component
   };
 
   return (

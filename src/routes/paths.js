@@ -25,9 +25,6 @@ export const paths = {
     four: `${ROOTS.DASHBOARD}/four`,
     five: `${ROOTS.DASHBOARD}/five`,
     six: `${ROOTS.DASHBOARD}/six`,
-    another: {
-      process: `${ROOTS.DASHBOARD}/another/proproces`,
-    }
     // group: {
     //   root: `${ROOTS.DASHBOARD}/group`,
     //   five: `${ROOTS.DASHBOARD}/group/five`,
